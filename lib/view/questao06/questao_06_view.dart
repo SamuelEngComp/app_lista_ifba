@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/view/questao04/questao_04_form.dart';
+import 'package:flutter_application_1/view/questao06/questao_06_form.dart';
 
-class Questao04 extends StatefulWidget {
+class Questao06 extends StatefulWidget {
   @override
-  _Questao04State createState() => _Questao04State();
+  _Questao06State createState() => _Questao06State();
 }
 
-class _Questao04State extends State<Questao04> {
+class _Questao06State extends State<Questao06> {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -24,16 +24,16 @@ class _Questao04State extends State<Questao04> {
               icon: Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Questao04Form()));
+                    MaterialPageRoute(builder: (context) => Questao06Form()));
               },
             ),
             title: const Text(
-              'Questão 04',
+              'Questão 06',
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
             subtitle: const Text(
-                'Dado os três lados de um triângulo determinar o perímetro do mesmo',
+                'Ler dois números inteiros e exibir o quociente e o resto da divisão inteira entre eles.',
                 style: TextStyle(color: Colors.white)),
           ),
         ],
