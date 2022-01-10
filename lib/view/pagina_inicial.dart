@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/view/questao01/questao_01_view.dart';
 import 'package:flutter_application_1/view/questao02/questao_02_view.dart';
+import 'package:flutter_application_1/view/questao03/questao_03_view.dart';
+import 'package:flutter_application_1/view/questao04/questao_04_view.dart';
 
 
 class PaginaInicial extends StatelessWidget {
@@ -20,12 +22,8 @@ class PaginaInicial extends StatelessWidget {
           children: [
             Questao01(),
             Questao02(),
-          Card(
-            child: Text('Card 3'),
-          ),
-          Card(
-            child: Text('Card 4'),
-          ),
+            Questao03(),
+            Questao04(),
           Card(
             child: Text('Card 1'),
           ),
