@@ -1,16 +1,13 @@
 # flutter_application_1
 
-A new Flutter project.
+Exercicios de lógica de programação
 
-## Getting Started
+## Lista de exercicio
 
-This project is a starting point for a Flutter application.
+A lista de exercicios esta disponivel em:
+https://ads.ifba.edu.br/dl1012
 
-A few resources to get you started if this is your first Flutter project:
+## Intuito do app
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+O app tem o intiuto de reforçar os conceitos de dart e flutter.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
