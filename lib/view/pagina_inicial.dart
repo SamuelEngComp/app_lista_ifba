@@ -7,6 +7,7 @@ import 'package:flutter_application_1/view/questao05/questao_05_view.dart';
 import 'package:flutter_application_1/view/questao06/questao_06_view.dart';
 import 'package:flutter_application_1/view/questao07/questao_07_view.dart';
 import 'package:flutter_application_1/view/questao08/questao_08_view.dart';
+import 'package:flutter_application_1/view/questao09/questao_09_view.dart';
 
 class PaginaInicial extends StatelessWidget {
   @override
@@ -15,7 +16,8 @@ class PaginaInicial extends StatelessWidget {
       appBar: AppBar(
         leading: Icon(Icons.work),
         centerTitle: true,
-        title: const Text('Exercicios IFBA'),
+        title: const Text('Exercicios IFBA', 
+        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -31,6 +33,7 @@ class PaginaInicial extends StatelessWidget {
             Questao06(),
             Questao07(),
             Questao08(),
+            Questao09(),
           ],
         ),
       ),

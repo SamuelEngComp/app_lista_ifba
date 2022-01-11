@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         splash: Image.asset(
           'assets/img/logo_ifba_.png',
         ),
-        splashTransition: SplashTransition.fadeTransition,
+        splashTransition: SplashTransition.slideTransition,
         nextScreen: PaginaInicial(),
       ),
     );
