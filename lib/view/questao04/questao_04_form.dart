@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controllers/questao_04_controller.dart';
+import 'package:flutter_application_1/controllers/questao04/questao_04_controller.dart';
 
 class Questao04Form extends StatefulWidget {
-
   @override
   _Questao04FormState createState() => _Questao04FormState();
 }
 
 class _Questao04FormState extends State<Questao04Form> {
-
   Questao04Controller controller = Questao04Controller();
   double lado01 = 0;
   double lado02 = 0;
@@ -32,70 +30,70 @@ class _Questao04FormState extends State<Questao04Form> {
           children: [
             Container(
               child: TextFormField(
-              keyboardType: TextInputType.number,
-              controller: lado01Digitado,
-              decoration: InputDecoration(
-                contentPadding: EdgeInsets.all(8),
-                hintText: 'Digite o lado 1',
+                keyboardType: TextInputType.number,
+                controller: lado01Digitado,
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.all(8),
+                  hintText: 'Digite o lado 1',
                 ),
               ),
             ),
-            
-            SizedBox(height: 10,),
-
+            SizedBox(
+              height: 10,
+            ),
             Container(
               child: TextFormField(
-              keyboardType: TextInputType.number,
-              controller: lado02Digitado,
-              decoration: InputDecoration(
-                contentPadding: EdgeInsets.all(8),
-                hintText: 'Digite o lado 2',
+                keyboardType: TextInputType.number,
+                controller: lado02Digitado,
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.all(8),
+                  hintText: 'Digite o lado 2',
                 ),
               ),
             ),
-
-            SizedBox(height: 10,),
-
+            SizedBox(
+              height: 10,
+            ),
             Container(
               child: TextFormField(
-              keyboardType: TextInputType.number,
-              controller: lado03Digitado,
-              decoration: InputDecoration(
-                contentPadding: EdgeInsets.all(8),
-                hintText: 'Digite o lado 3',
+                keyboardType: TextInputType.number,
+                controller: lado03Digitado,
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.all(8),
+                  hintText: 'Digite o lado 3',
                 ),
               ),
             ),
-
-            SizedBox(height: 10,),
-
-            ElevatedButton(
-              onPressed: checaValores,
-              child: Text('Calcular')),
-              SizedBox(height: 10,),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                  SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(onPressed: checaValores, child: Text('Calcular')),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: 10,
+                  ),
                   Text('Resultado Perimetro: $perimetro'),
                 ],
               ),
-              ),
-              
+            ),
           ],
         ),
       ),
-    
     );
   }
 
-
-   void checaValores(){
-    if(lado01Digitado.text == null || lado02Digitado.text == null || lado03Digitado.text == null){
+  void checaValores() {
+    if (lado01Digitado.text == null ||
+        lado02Digitado.text == null ||
+        lado03Digitado.text == null) {
       setState(() {});
-    }
-    else{
+    } else {
       setState(() {
         lado01 = double.tryParse(lado01Digitado.text)!;
         lado02 = double.tryParse(lado02Digitado.text)!;
@@ -104,6 +102,4 @@ class _Questao04FormState extends State<Questao04Form> {
       });
     }
   }
-
-
 }

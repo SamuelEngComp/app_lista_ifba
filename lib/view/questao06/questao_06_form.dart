@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controllers/questao_06_controller.dart';
+import 'package:flutter_application_1/controllers/questao06/questao_06_controller.dart';
 
 class Questao06Form extends StatefulWidget {
   @override

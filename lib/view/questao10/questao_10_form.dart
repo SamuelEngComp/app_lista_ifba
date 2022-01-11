@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controllers/questao03/questao_03_controller.dart';
-import 'package:flutter_application_1/view/questao03/questao_03_view.dart';
+import 'package:flutter_application_1/controllers/questao10/questao_10_controller.dart';
 
-class Questao03Form extends StatefulWidget {
+class Questao10Form extends StatefulWidget {
   @override
-  _Questao03FormState createState() => _Questao03FormState();
+  _Questao10FormState createState() => _Questao10FormState();
 }
 
-class _Questao03FormState extends State<Questao03Form> {
-  TextEditingController valorDoRaio = TextEditingController();
-  Questao03Controller controller = Questao03Controller();
-  double areaCincunferencia = 0;
-  double perimetroCincunferencia = 0;
+class _Questao10FormState extends State<Questao10Form> {
+  TextEditingController campoNumeroDecimal = TextEditingController();
+  int numeroBinario = 0;
+  Questao10Controller controller = Questao10Controller();
 
   @override
   Widget build(BuildContext context) {
@@ -28,29 +26,28 @@ class _Questao03FormState extends State<Questao03Form> {
             Container(
               child: TextFormField(
                 keyboardType: TextInputType.number,
-                controller: valorDoRaio,
+                controller: campoNumeroDecimal,
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.all(8),
-                  hintText: 'Digite o raio da circunferencia',
+                  hintText: 'número decimal',
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             ElevatedButton(onPressed: checaValores, child: Text('Calcular')),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Resultado Area: $areaCincunferencia'),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text('Resultado Perimetro: $perimetroCincunferencia'),
+                  Text('Resultado: $numeroBinario'),
                 ],
               ),
             ),
@@ -61,14 +58,12 @@ class _Questao03FormState extends State<Questao03Form> {
   }
 
   void checaValores() {
-    if (valorDoRaio.text == null) {
+    if (campoNumeroDecimal.text == null) {
       setState(() {});
     } else {
       setState(() {
-        areaCincunferencia =
-            controller.areaCircunferencia(double.tryParse(valorDoRaio.text)!);
-        perimetroCincunferencia = controller
-            .perimetroCircunferencia(double.tryParse(valorDoRaio.text)!);
+        numeroBinario = controller.conversorDecimalParaBinario(
+            numeroDecimal: int.tryParse(campoNumeroDecimal.text)!);
       });
     }
   }
