@@ -22,14 +22,14 @@ class _CardTelaInicialState extends State<CardTelaInicial> {
       margin: EdgeInsets.all(8.0),
       elevation: 9.0,
       borderOnForeground: true,
-      color: Colors.red,
+      color: Colors.lightGreen,
       shadowColor: Colors.black,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ListTile(
             leading: IconButton(
-              color: Colors.white,
+              color: Colors.black,
               icon: Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.push(
@@ -41,12 +41,14 @@ class _CardTelaInicialState extends State<CardTelaInicial> {
             title: Text(
               widget.titulo,
               style: const TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
                   fontSize: 19),
             ),
             subtitle:
-                Text(widget.subTitulo, style: TextStyle(color: Colors.white)),
+                Text(widget.subTitulo, 
+                style: TextStyle(
+                  color: Colors.black)),
           ),
         ],
       ),
