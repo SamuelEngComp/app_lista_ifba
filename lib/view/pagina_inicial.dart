@@ -41,16 +41,25 @@ class PaginaInicial extends StatelessWidget {
         height: MediaQuery.of(context).size.height, */
         slivers: [
           SliverAppBar(
-            centerTitle: true,
+            backgroundColor: Colors.orange.shade600,
+            title: Text('Exercícios IFBA',
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+            actions: [
+              Image.asset('assets/img/logo_ifba.png',
+              fit: BoxFit.cover,),
+              SizedBox(width: 20,),
+            ],
+            //centerTitle: true,
             pinned: true,
             floating: true,
             expandedHeight: 200,
             stretch: true,
             flexibleSpace: FlexibleSpaceBar(
-              background: Image.asset('assets/img/logo_ifba.png',
-                  alignment: Alignment.center,
-                  /* fit: BoxFit.cover */),
-              title: Text('Exercícios IFBA'),
+              background: Image.asset('assets/img/salvador.jpg',
+              scale: 1,
+              //    alignment: Alignment.center,
+                    fit: BoxFit.cover),
+              //title: Text('Exercícios IFBA'),
               centerTitle: true,
               stretchModes: [
                 StretchMode.fadeTitle,

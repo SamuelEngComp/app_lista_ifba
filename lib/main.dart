@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
+        primarySwatch: Colors.orange,
+        //backgroundColor: Colors.red,
       ),
       home: AnimatedSplashScreen(
         splashIconSize: 300,

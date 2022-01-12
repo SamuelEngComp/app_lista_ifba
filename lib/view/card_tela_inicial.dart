@@ -22,7 +22,7 @@ class _CardTelaInicialState extends State<CardTelaInicial> {
       margin: EdgeInsets.all(8.0),
       elevation: 9.0,
       borderOnForeground: true,
-      color: Colors.lightGreen,
+      color: Colors.orange.shade100,
       shadowColor: Colors.black,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
