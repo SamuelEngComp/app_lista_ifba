@@ -16,7 +16,7 @@ class CampoNumero extends StatelessWidget {
       inputFormatters: [
         FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
       ],
-      maxLength: 4,
+      maxLength: 6,
       minLines: 1,
       maxLines: 1,
       keyboardType: TextInputType.number,

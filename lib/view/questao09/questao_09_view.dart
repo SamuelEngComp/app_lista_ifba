@@ -15,7 +15,9 @@ class _Questao09State extends State<Questao09> {
     return CardTelaInicial(
       titulo: 'Questão 09',
       subTitulo: 'Faça um algoritmo que calcule e apresente o valor do volume de uma lata de óleo, dado seu raio e sua altura.',
-      telaRedirecionar: Questao09Form(),
+      telaRedirecionar: Questao09Form(
+        enunciadoDaQuestao: 'Faça um algoritmo que calcule e apresente o valor do volume de uma lata de óleo, dado seu raio e sua altura.', 
+        nomeNumeroQuestao: 'Questão 09',),
     );
   }
 }

@@ -1,9 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controllers/controller.dart';
+import 'package:flutter_application_1/view/campo_numero.dart';
+import 'package:flutter_application_1/view/enunciado_questao.dart';
 
 import 'package:flutter_application_1/view/questao01/questao_01_view.dart';
 
 class Questao08Form extends StatefulWidget {
+
+   String enunciadoDaQuestao;
+  String nomeNumeroQuestao;
+
+  Questao08Form(
+      {required this.enunciadoDaQuestao, 
+      required this.nomeNumeroQuestao});
+
+
+
+
   @override
   _Questao08FormState createState() => _Questao08FormState();
 }
@@ -15,33 +28,42 @@ class _Questao08FormState extends State<Questao08Form> {
 
   @override
   Widget build(BuildContext context) {
+
+    double largura = MediaQuery.of(context).size.width;
+    double altura = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('Digitar Valor'),
+        title: Text(widget.nomeNumeroQuestao),
       ),
       body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+        width: largura,
+        height: altura,
+        child: ListView(
+          
           children: [
-            Container(
-              child: TextFormField(
-                keyboardType: TextInputType.number,
-                controller: temperatura,
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.all(8),
-                  hintText: 'Digite a temperatura F -> C',
-                ),
+
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                EnunciadoQuestao(
+                  enunciado: widget.enunciadoDaQuestao),
+
+                  Container(
+              width: largura * 0.8,
+              child: CampoNumero(
+                campoNumero: temperatura,
+                hintTexto: 'Digite a temperatura F -> C',
               ),
             ),
             const SizedBox(
               height: 10,
             ),
-            ElevatedButton(onPressed: checaValores, child: Text('Calcular')),
-            const SizedBox(
-              height: 10,
+            Padding(
+              padding: const EdgeInsets.all(9.0),
+              child: ElevatedButton(onPressed: checaValores, child: Text('Calcular')),
             ),
+            
             Container(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -53,6 +75,10 @@ class _Questao08FormState extends State<Questao08Form> {
                 ],
               ),
             ),
+              ],
+            ),
+
+            
           ],
         ),
       ),

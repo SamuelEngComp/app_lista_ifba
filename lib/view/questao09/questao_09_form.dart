@@ -1,7 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controllers/controller.dart';
+import 'package:flutter_application_1/view/campo_numero.dart';
+import 'package:flutter_application_1/view/enunciado_questao.dart';
 
 class Questao09Form extends StatefulWidget {
+
+  String enunciadoDaQuestao;
+  String nomeNumeroQuestao;
+
+  Questao09Form(
+      {required this.enunciadoDaQuestao, 
+      required this.nomeNumeroQuestao});
+
+
+
   @override
   _Questao09FormState createState() => _Questao09FormState();
 }
@@ -14,46 +26,52 @@ class _Questao09FormState extends State<Questao09Form> {
 
   @override
   Widget build(BuildContext context) {
+
+    double largura = MediaQuery.of(context).size.width;
+    double altura = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('Digitar Valor'),
+        title: Text(widget.nomeNumeroQuestao),
       ),
       body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+        width: largura,
+        height: altura,
+        child: ListView(
+          
           children: [
-            Container(
-              child: TextFormField(
-                keyboardType: TextInputType.number,
-                controller: campoRaio,
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.all(8),
-                  hintText: 'raio',
-                ),
+
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                EnunciadoQuestao(
+                  enunciado: widget.enunciadoDaQuestao),
+
+                  Container(
+              width: largura * 0.8,
+              child: CampoNumero(
+                campoNumero: campoRaio,
+                hintTexto: 'Raio',
               ),
             ),
             const SizedBox(
               height: 10,
             ),
             Container(
-              child: TextFormField(
-                keyboardType: TextInputType.number,
-                controller: campoAltura,
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.all(8),
-                  hintText: 'altura',
-                ),
+              width: largura*0.8,
+              child: CampoNumero(
+                campoNumero: campoAltura,
+                hintTexto: 'Altura',
               ),
             ),
             const SizedBox(
               height: 10,
             ),
-            ElevatedButton(onPressed: checaValores, child: Text('Calcular')),
-            const SizedBox(
-              height: 10,
+            Padding(
+              padding: const EdgeInsets.all(9.0),
+              child: ElevatedButton(onPressed: checaValores, child: Text('Calcular')),
             ),
+            
             Container(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -65,6 +83,10 @@ class _Questao09FormState extends State<Questao09Form> {
                 ],
               ),
             ),
+              ],
+            ),
+
+            
           ],
         ),
       ),

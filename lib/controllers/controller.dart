@@ -35,7 +35,7 @@ class Controller {
       numero1 % numero2;
 
   double quocienteEntreDoisNumeros(int numero1, int numero2) {
-    return numero1 / numero2;
+    return double.parse((numero1 / numero2).toStringAsFixed(2));
   }
 
   /// Questão 07: Dado o tamanho da base e da altura de um retângulo,
@@ -47,13 +47,13 @@ class Controller {
   /// Questão 08: Dado o tamanho da base e da altura de um retângulo,
   /// calcular a sua área e o seu perímetro.
   double fahrenheitToCelsius(double temperaturaFahrenheit) {
-    return ((5 / 9) * (temperaturaFahrenheit - 32));
+    return double.parse(((5 / 9) * (temperaturaFahrenheit - 32)).toStringAsFixed(2));
   }
 
   /// Questão 09: Dado o tamanho da base e da altura de um retângulo,
   /// calcular a sua área e o seu perímetro.
   double volumeLataDeOleo(double raio, double altura) =>
-      (PI * (raio * raio) * altura);
+      double.parse((PI * (raio * raio) * altura).toStringAsFixed(2));
 
   /// Questão 10: Dado o tamanho da base e da altura de um retângulo,
   /// calcular a sua área e o seu perímetro.

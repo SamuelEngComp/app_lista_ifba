@@ -12,8 +12,11 @@ class _Questao08State extends State<Questao08> {
   Widget build(BuildContext context) {
     return CardTelaInicial(
         titulo: 'Questão 08',
-        subTitulo: 'Dado que a fórmula para conversão de Fahrenheit' +
+        subTitulo: 'Dado que a fórmula para conversão de Fahrenheit ' +
             'para Celsius é C = 5/9 (F – 32), leu um valor de temperatura em Fahrenheit e exibi-lo em Celsius',
-        telaRedirecionar: Questao08Form());
+        telaRedirecionar: Questao08Form(
+          enunciadoDaQuestao: 'Dado que a fórmula para conversão de Fahrenheit' +
+            'para Celsius é C = 5/9 (F – 32), leia um valor de temperatura em Fahrenheit e exibi-lo em Celsius', 
+          nomeNumeroQuestao: 'Questão 08',));
   }
 }

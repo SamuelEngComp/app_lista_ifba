@@ -14,6 +14,8 @@ class _Questao10State extends State<Questao10> {
         titulo: 'Questao 10',
         subTitulo:
             'Converter um inteiro informado menor que 32 para sua representação em binário',
-        telaRedirecionar: Questao10Form());
+        telaRedirecionar: Questao10Form(
+          enunciadoDaQuestao: 'Converter um inteiro informado menor que 32 para sua representação em binário', 
+          nomeNumeroQuestao: 'Questao 10',));
   }
 }

@@ -14,6 +14,8 @@ class _Questao06State extends State<Questao06> {
         titulo: 'Questão 06',
         subTitulo:
             'Ler dois números inteiros e exibir o quociente e o resto da divisão inteira entre eles.',
-        telaRedirecionar: Questao06Form());
+        telaRedirecionar: Questao06Form(
+          enunciadoDaQuestao: 'Ler dois números inteiros e exibir o quociente e o resto da divisão inteira entre eles.', 
+          nomeNumeroQuestao: 'Questão 06',));
   }
 }

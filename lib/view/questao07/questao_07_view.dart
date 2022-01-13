@@ -14,6 +14,8 @@ class _Questao07State extends State<Questao07> {
         titulo: 'Questão 07',
         subTitulo:
             'Solicitar a idade de uma pessoa em dias e informar na tela a idade em anos, meses e dias.',
-        telaRedirecionar: Questao07Form());
+        telaRedirecionar: Questao07Form(
+          enunciadoDaQuestao: 'Solicitar a idade de uma pessoa em dias e informar na tela a idade em anos, meses e dias.', 
+          nomeNumeroQuestao: 'Questão 07',));
   }
 }

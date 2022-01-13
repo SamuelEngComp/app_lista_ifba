@@ -1,7 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controllers/controller.dart';
+import 'package:flutter_application_1/view/enunciado_questao.dart';
+
+import '../campo_numero.dart';
 
 class Questao10Form extends StatefulWidget {
+
+  String enunciadoDaQuestao;
+  String nomeNumeroQuestao;
+
+  Questao10Form(
+      {required this.enunciadoDaQuestao, 
+      required this.nomeNumeroQuestao});
+
+
   @override
   _Questao10FormState createState() => _Questao10FormState();
 }
@@ -13,50 +25,48 @@ class _Questao10FormState extends State<Questao10Form> {
 
   @override
   Widget build(BuildContext context) {
+
+    double largura = MediaQuery.of(context).size.width;
+    double altura = MediaQuery.of(context).size.height;
+
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('Digitar Valor'),
+        title: Text(widget.nomeNumeroQuestao),
       ),
       body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+        width: largura,
+        height: altura,
+        child: ListView(
+          
           children: [
-            Container(
-              width: MediaQuery.of(context).size.width * .8,
-              child: Column(
-                children: [
-                  Text('teste'),
-                  TextFormField(
-                    keyboardType: TextInputType.number,
-                    controller: campoNumeroDecimal,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      contentPadding: EdgeInsets.all(8),
-                      hintText: 'número decimal',
+
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                EnunciadoQuestao(
+                  enunciado: widget.enunciadoDaQuestao),
+
+                  Container(
+                    width: largura * 0.8,
+                    child: CampoNumero(
+                      campoNumero: campoNumeroDecimal,
+                      hintTexto: 'número decimal',
                     ),
                   ),
-                ],
+
+                  const SizedBox(
+                    height: 10,
+                  ),
+
+                  Padding(
+              padding: const EdgeInsets.all(9.0),
+              child: ElevatedButton(
+                onPressed: checaValores,
+                child: Text('Calcular'),
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(
-              onPressed: checaValores,
-              child: Text('Calcular'),
-              style: ButtonStyle(
-                shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                )),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
+
             Container(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -68,6 +78,15 @@ class _Questao10FormState extends State<Questao10Form> {
                 ],
               ),
             ),
+
+              ],
+            ),
+
+            
+            
+            
+           
+            
           ],
         ),
       ),
