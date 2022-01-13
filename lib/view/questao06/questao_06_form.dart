@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controllers/questao06/questao_06_controller.dart';
+import 'package:flutter_application_1/controllers/controller.dart';
 
 class Questao06Form extends StatefulWidget {
   @override
@@ -13,7 +13,7 @@ class _Questao06FormState extends State<Questao06Form> {
   int restoDivisao = 0;
   double quociente = 0;
 
-  Questao06Controller controller = Questao06Controller();
+  Controller controller = Controller();
 
   @override
   Widget build(BuildContext context) {

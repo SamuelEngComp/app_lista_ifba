@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controllers/questao07/questao_07_controller.dart';
+import 'package:flutter_application_1/controllers/controller.dart';
 
 class Questao07Form extends StatefulWidget {
   @override
@@ -8,7 +8,7 @@ class Questao07Form extends StatefulWidget {
 
 class _Questao07FormState extends State<Questao07Form> {
   TextEditingController idadeEmDias = TextEditingController();
-  Questao07Controller controller = Questao07Controller();
+  Controller controller = Controller();
   String emDesenvolvimento = 'Em desenvolvimento';
 
   @override

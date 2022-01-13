@@ -14,6 +14,10 @@ class _Questao03State extends State<Questao03> {
         titulo: 'Questão 03',
         subTitulo:
             'Dado o tamanho do raio de uma circunferência, calcular a área e o perímetro da mesma.',
-        telaRedirecionar: Questao03Form());
+        telaRedirecionar: Questao03Form(
+          enunciadoDaQuestao:
+              'Dado o tamanho do raio de uma circunferência, calcular a área e o perímetro da mesma.',
+          nomeNumeroQuestao: 'Questão 03',
+        ));
   }
 }

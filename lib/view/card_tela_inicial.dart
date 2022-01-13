@@ -27,41 +27,32 @@ class _CardTelaInicialState extends State<CardTelaInicial> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-
           ExpansionTile(
             iconColor: Colors.red,
             collapsedIconColor: Colors.black,
             childrenPadding: EdgeInsets.all(9),
             title: Text(widget.titulo,
-            style: const TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 19)),
+                style: const TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 19)),
             children: [
-
               ListTile(
-              leading: IconButton(
-                color: Colors.black,
-                icon: Icon(Icons.arrow_back),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => widget.telaRedirecionar));
-              },
-            ),
-            
-            subtitle:
-                Text(widget.subTitulo, 
-                style: TextStyle(
-                  color: Colors.black)),
-          ),
-
+                leading: IconButton(
+                  color: Colors.black,
+                  icon: Icon(Icons.arrow_back),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => widget.telaRedirecionar));
+                  },
+                ),
+                subtitle: Text(widget.subTitulo,
+                    style: TextStyle(color: Colors.black)),
+              ),
             ],
-            ),
-
-
-          
+          ),
         ],
       ),
     );

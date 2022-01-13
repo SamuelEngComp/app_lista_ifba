@@ -13,6 +13,9 @@ class _Questao05State extends State<Questao05> {
     return CardTelaInicial(
         titulo: 'Questão 05',
         subTitulo: 'Ler um número inteiro e exibir o seu sucessor.',
-        telaRedirecionar: Questao05Form());
+        telaRedirecionar: Questao05Form(
+          enunciadoDaQuestao: 'Ler um número inteiro e exibir o seu sucessor.',
+          nomeNumeroQuestao: 'Questão 05',
+        ));
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controllers/questao10/questao_10_controller.dart';
+import 'package:flutter_application_1/controllers/controller.dart';
 
 class Questao10Form extends StatefulWidget {
   @override
@@ -9,7 +9,7 @@ class Questao10Form extends StatefulWidget {
 class _Questao10FormState extends State<Questao10Form> {
   TextEditingController campoNumeroDecimal = TextEditingController();
   int numeroBinario = 0;
-  Questao10Controller controller = Questao10Controller();
+  Controller controller = Controller();
 
   @override
   Widget build(BuildContext context) {
@@ -24,19 +24,36 @@ class _Questao10FormState extends State<Questao10Form> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              child: TextFormField(
-                keyboardType: TextInputType.number,
-                controller: campoNumeroDecimal,
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.all(8),
-                  hintText: 'número decimal',
-                ),
+              width: MediaQuery.of(context).size.width * .8,
+              child: Column(
+                children: [
+                  Text('teste'),
+                  TextFormField(
+                    keyboardType: TextInputType.number,
+                    controller: campoNumeroDecimal,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      contentPadding: EdgeInsets.all(8),
+                      hintText: 'número decimal',
+                    ),
+                  ),
+                ],
               ),
             ),
             const SizedBox(
               height: 10,
             ),
-            ElevatedButton(onPressed: checaValores, child: Text('Calcular')),
+            ElevatedButton(
+              onPressed: checaValores,
+              child: Text('Calcular'),
+              style: ButtonStyle(
+                shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                )),
+              ),
+            ),
             const SizedBox(
               height: 10,
             ),

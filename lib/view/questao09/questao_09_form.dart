@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controllers/questao09/questao_09_controller.dart';
+import 'package:flutter_application_1/controllers/controller.dart';
 
 class Questao09Form extends StatefulWidget {
   @override
@@ -10,7 +10,7 @@ class _Questao09FormState extends State<Questao09Form> {
   TextEditingController campoRaio = TextEditingController();
   TextEditingController campoAltura = TextEditingController();
   double volumeDaLata = 0;
-  Questao09Controller controller = Questao09Controller();
+  Controller controller = Controller();
 
   @override
   Widget build(BuildContext context) {

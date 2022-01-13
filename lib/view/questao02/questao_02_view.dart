@@ -14,6 +14,10 @@ class _Questao02State extends State<Questao02> {
         titulo: 'Questão 02',
         subTitulo:
             'Dado o tamanho do lado de um quadrado, calcular a área e o perímetro do mesmo.',
-        telaRedirecionar: Questao02Formulario());
+        telaRedirecionar: Questao02Formulario(
+          enunciadoQuestao:
+              'Dado o tamanho do lado de um quadrado, calcular a área e o perímetro do mesmo.',
+          nomeNumeroQuestao: 'Questão 02',
+        ));
   }
 }

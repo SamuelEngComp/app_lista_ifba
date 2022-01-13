@@ -14,6 +14,10 @@ class _Questao04State extends State<Questao04> {
         titulo: 'Questão 04',
         subTitulo:
             'Dado os três lados de um triângulo determinar o perímetro do mesmo.',
-        telaRedirecionar: Questao04Form());
+        telaRedirecionar: Questao04Form(
+          enunciadoDaQuestao:
+              'Dado os três lados de um triângulo determinar o perímetro do mesmo.',
+          nomeNumeroQuestao: 'Questão 04',
+        ));
   }
 }

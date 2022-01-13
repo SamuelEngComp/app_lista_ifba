@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controllers/questao08/questao_08_controller.dart';
+import 'package:flutter_application_1/controllers/controller.dart';
+
 import 'package:flutter_application_1/view/questao01/questao_01_view.dart';
 
 class Questao08Form extends StatefulWidget {
@@ -10,7 +11,7 @@ class Questao08Form extends StatefulWidget {
 class _Questao08FormState extends State<Questao08Form> {
   TextEditingController temperatura = TextEditingController();
   double grausCelsius = 0;
-  Questao08Controller controller = Questao08Controller();
+  Controller controller = Controller();
 
   @override
   Widget build(BuildContext context) {

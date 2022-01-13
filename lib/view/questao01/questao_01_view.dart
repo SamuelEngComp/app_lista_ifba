@@ -11,9 +11,14 @@ class _Questao01State extends State<Questao01> {
   @override
   Widget build(BuildContext context) {
     return CardTelaInicial(
-        titulo: 'Questão 01',
-        subTitulo:
+      titulo: 'Questão 01',
+      subTitulo:
+          'Dado o tamanho da base e da altura de um retângulo, calcular a sua área e o seu perímetro.',
+      telaRedirecionar: Questao01Formulario(
+        enunciadoDaQuestao:
             'Dado o tamanho da base e da altura de um retângulo, calcular a sua área e o seu perímetro.',
-        telaRedirecionar: Questao01Formulario());
+        nomeNumeroQuestao: 'Questão 01',
+      ),
+    );
   }
 }
