@@ -72,4 +72,18 @@ class Controller {
     //Referencia:
     //https://basthatisureshbabu-dart-basics.blogspot.com/2019/06/convert-decimal-to-binary.html?m=0
   }
+
+  /// Questão 11: Faça um algoritmo para calcular a nota semestral de um aluno. A nota semestral é obtida
+  /// pela média aritmética entre a nota de 2 bimestres. Cada nota de bimestre é composta por 2 notas de provas.
+
+  double notaSemestre({required double nota01,required double nota02,
+  required double nota03,required double nota04}){
+    double notaPrimeiroBimestre = (nota01+nota02)/2;
+    double notaSegundoBimestre = (nota03+nota04)/2;
+    double notaSemestral = (notaPrimeiroBimestre + notaSegundoBimestre)/2;
+    return double.parse(notaSemestral.toStringAsFixed(2));
+
+  }
+
+
 }

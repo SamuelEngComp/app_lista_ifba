@@ -9,6 +9,7 @@ import 'package:flutter_application_1/view/questao07/questao_07_view.dart';
 import 'package:flutter_application_1/view/questao08/questao_08_view.dart';
 import 'package:flutter_application_1/view/questao09/questao_09_view.dart';
 import 'package:flutter_application_1/view/questao10/questao_10_view.dart';
+import 'package:flutter_application_1/view/questao11/questao_11_view.dart';
 
 class PaginaInicial extends StatelessWidget {
   @override
@@ -24,6 +25,7 @@ class PaginaInicial extends StatelessWidget {
       Questao08(),
       Questao09(),
       Questao10(),
+      Questao11(),
     ];
 
     return Scaffold(
