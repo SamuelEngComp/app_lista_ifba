@@ -1,0 +1,111 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_application_1/controllers/controller.dart';
+
+import '../campo_numero.dart';
+import '../enunciado_questao.dart';
+
+class Questao12Form extends StatefulWidget {
+
+  String enunciadoDaQuestao;
+  String nomeNumeroQuestao;
+
+  Questao12Form(
+      {required this.enunciadoDaQuestao, 
+      required this.nomeNumeroQuestao});
+
+  
+
+  @override
+  _Questao12FormState createState() => _Questao12FormState();
+}
+
+class _Questao12FormState extends State<Questao12Form> {
+
+  TextEditingController campoVelocidade = TextEditingController();
+  
+  double velocidadeConvertida = 0;
+  Controller controller = Controller();
+
+
+  @override
+  Widget build(BuildContext context) {
+
+    double largura = MediaQuery.of(context).size.width;
+    double altura = MediaQuery.of(context).size.height;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.nomeNumeroQuestao),
+      ),
+      body: Container(
+        width: largura,
+        height: altura,
+        child: ListView(
+          
+          children: [
+
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                EnunciadoQuestao(
+                  enunciado: widget.enunciadoDaQuestao),
+
+                  Container(
+                    width: largura * 0.8,
+                    child: CampoNumero(
+                      campoNumero: campoVelocidade,
+                      hintTexto: 'Velocidade km/h',
+                    ),
+                  ),
+
+                  const SizedBox(
+                    height: 10,
+                  ),
+
+                  Padding(
+              padding: const EdgeInsets.all(9.0),
+              child: ElevatedButton(
+                onPressed: checaValores,
+                child: Text('Calcular'),
+              ),
+            ),
+
+            Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text('Resultado: $velocidadeConvertida'),
+                ],
+              ),
+            ),
+
+              ],
+            ),
+
+            
+            
+            
+           
+            
+          ],
+        ),
+      ),
+    );
+  }
+
+void checaValores() {
+    if (campoVelocidade.text == null) {
+      setState(() {});
+    } else {
+      setState(() {
+        velocidadeConvertida = controller.conversorVelocidade(
+          velocidadeKm: double.tryParse(campoVelocidade.text)!);
+      });
+    }
+  }
+
+
+}

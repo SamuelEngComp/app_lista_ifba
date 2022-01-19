@@ -86,4 +86,9 @@ class Controller {
   }
 
 
+  double conversorVelocidade({required double velocidadeKm}){
+    return double.parse((velocidadeKm * 3.6).toStringAsFixed(2));
+  }
+
+
 }

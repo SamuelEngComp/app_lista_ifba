@@ -14,9 +14,10 @@ class CampoNumero extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       inputFormatters: [
-        FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
+        //FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
+        FilteringTextInputFormatter.allow(RegExp(r'[/(\d{2})\.(\d{2})]')),
       ],
-      maxLength: 6,
+      maxLength: 5,
       minLines: 1,
       maxLines: 1,
       keyboardType: TextInputType.number,
@@ -25,6 +26,7 @@ class CampoNumero extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
         helperText: hintTexto,
+        labelText: hintTexto,
         contentPadding: const EdgeInsets.all(8),
         hintText: hintTexto,
       ),
