@@ -20,7 +20,7 @@ class _CardTelaInicialState extends State<CardTelaInicial> {
   Widget build(BuildContext context) {
     return Card(
       margin: EdgeInsets.all(8.0),
-      elevation: 9.0,
+      elevation: 20.0,
       borderOnForeground: true,
       color: Colors.orange.shade100,
       shadowColor: Colors.black,
