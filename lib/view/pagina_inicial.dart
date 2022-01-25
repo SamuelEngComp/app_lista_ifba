@@ -10,6 +10,7 @@ import 'package:flutter_application_1/view/questao08/questao_08_view.dart';
 import 'package:flutter_application_1/view/questao09/questao_09_view.dart';
 import 'package:flutter_application_1/view/questao10/questao_10_view.dart';
 import 'package:flutter_application_1/view/questao11/questao_11_view.dart';
+import 'package:flutter_application_1/view/questao13/questao_13_view.dart';
 
 import 'questao12/questao_12_view.dart';
 
@@ -29,6 +30,7 @@ class PaginaInicial extends StatelessWidget {
       Questao10(),
       Questao11(),
       Questao12(),
+      Questao13(),
     ];
 
     return Scaffold(

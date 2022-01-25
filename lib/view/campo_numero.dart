@@ -25,7 +25,6 @@ class CampoNumero extends StatelessWidget {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
         ),
-        helperText: hintTexto,
         labelText: hintTexto,
         contentPadding: const EdgeInsets.all(8),
         hintText: hintTexto,

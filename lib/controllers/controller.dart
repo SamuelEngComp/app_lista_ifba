@@ -85,10 +85,23 @@ class Controller {
 
   }
 
-
+  /// Questão 12
+  /// Faça um algoritmo que transforme uma velocidade fornecida em m/s pelo usuário para
+  /// Km/h. Para tal, multiplique o valor em m/s por 3,6.
   double conversorVelocidade({required double velocidadeKm}){
     return double.parse((velocidadeKm * 3.6).toStringAsFixed(2));
   }
 
+
+  /// Questão 13: 
+  /// Um circuito elétrico é composto de duas resistências R1 e R2 em paralelo, e ambas em
+  ///  sequência de uma resistência R3. Faça um algoritmo para calcular a resistência
+  ///  equivalente desse circuito.
+  
+  double resistenciaEquivalente({required double resistor1, required double resistor2, required double resistor3}){
+    double resistenciaEquivalente = ((resistor1*resistor2)/(resistor1 + resistor2)) + resistor3;
+    return double.parse((resistenciaEquivalente).toStringAsFixed(2));
+
+  }
 
 }
